@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>进度条</title>
+		<style type="text/css">
+			body {
+				background-color: #1e2420;
+			}
+			.graph {
+				width: 450px;
+				border: 1px solid #C75211;
+				height: 25px;
+			}
+			#bar {
+				display: block;
+				background: #e57233;
+				height: 100%;
+				text-align: center;
+				font-family: Verdana;
+				line-height: 25px;
+				color: #FFF;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(obj) {
+				return document.getElementById(obj);
+			}
+			function go() {
+				$("bar").style.width = parseInt($("bar").style.width) + 1 + "%";
+				$("bar").innerHTML = $("bar").style.width;
+				if($("bar").style.width == "100%") {
+					window.clearInterval(bar);
+					$("bar").innerHTML = '完成'
+				}
+			}
+			var bar = window.setInterval("go()", 50);
+			window.onload = function() {
+				bar;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="graph">
+			<div id="bar" style="width:1%;"></div>
+		</div>
+	</body>
+</html>

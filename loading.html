@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Loading</title>
+		<style type="text/css">
+			html, body{
+				padding: 0;
+				margin: 0;
+				height: 100%;
+				font-size: 1.6rem;
+			}
+			.main {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-flow: column;
+			}
+			.loading{
+				height: 6rem;
+			}
+			.loading span {
+				display: inline-block;
+				width: .5rem;
+				border-radius: 4px;
+				background: lightgreen;
+				-webkit-animation: load 1s ease infinite;
+				animation: load 1s ease infinite;
+			}
+			@-webkit-keyframes load {
+				0%,
+				100% {
+					height: 3rem;
+					background: lightgreen;
+				}
+				50% {
+					height: 6rem;
+					margin: -1rem 0;
+					background: lightblue;
+				}
+			}
+			.loading span:nth-child(2) {
+				-webkit-animation-delay: 0.2s;
+				animation-delay: 0.2s;
+			}
+			.loading span:nth-child(3) {
+				-webkit-animation-delay: 0.4s;
+				animation-delay: 0.4s;
+			}
+			.loading span:nth-child(4) {
+				-webkit-animation-delay: 0.6s;
+				animation-delay: 0.6s;
+			}
+			.loading span:nth-child(5) {
+				-webkit-animation-delay: 0.8s;
+				animation-delay: 0.8s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="loading">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div style="text-align: center;height: 4rem;line-height: 4rem;margin-top: 1rem;">加载中，请稍后...</div>
+		</div>
+	</body>
+</html>

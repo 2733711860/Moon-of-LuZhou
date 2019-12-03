@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>图片翻转</title>
+		<link rel="stylesheet" href="css/pictureFan.css">
+		<link rel="stylesheet" href="css/component.css" />
+		<style>
+			.allPage{
+				height: 100%;
+				display: flex;
+				flex-flow: row;
+			}
+			.rightPart{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body style="display: flex;flex-flow: column;justify-content: space-between;">
+		<div class="allPage" style="flex: 1;">
+			<div class="rightPart">
+				<div class="wrapper">
+					<ul>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=866'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								好脾气是磨出来的
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=324'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+							  坏毛病是惯出来的
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=868'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+							   爱挑事是闲出来的
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=871'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								若有来世
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=244'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								我要生在国庆节
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=43'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								死在清明节
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=1000'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								我生的时候
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=222'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+							   普天同庆
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=123'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								我死的时候
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=321'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								全世界都在悲伤
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=542'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								钞票薄情寡义
+							</h3>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class='picBox'>
+								<div class='show'>
+									<image height='180px' width='180px' src='https://picsum.photos/180/180?image=59'></image>
+								</div>
+								<div class='hidee'>
+									<h3>
+								肥肉不离不弃
+							</h3>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="display: flex;justify-content: center;">
+			<button onclick="window.history.back(-1)" class="btn btn-4 btn-4b icon-arrow-left" style="background-color: #5c5353;">BACK</button>
+			<button onclick="goPage()" class="btn btn-4 btn-4a icon-arrow-right" style="background-color: #5c5353;">NEXT</button>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script src="js/pictureFan.js"></script>
+
+		<script>
+			function goPage () {
+				window.location.href = 'tupianxiangce.html'
+			}
+		</script>
+	</body>
+</html>

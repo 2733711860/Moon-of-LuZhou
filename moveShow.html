@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>移动显示</title>
+		<link rel="stylesheet" href="css/component.css" />
+		<style>
+			html, body{
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				background-color: #F4F5F9;
+			}
+			body{
+				display: flex;
+				flex-flow: column;
+				justify-content: space-between;
+			}
+			.item_content{
+				margin: 0 auto;
+				width: 300px;
+				height: 320px;
+				background-color: #FFFFFF;
+				position: relative;
+			}
+			.item_info{
+				height: 140px;
+				width: 100%;
+				position: absolute;
+				overflow: hidden;
+				background: #FFFFFF;
+				bottom: 0;
+				transition: all .2s;
+			}
+			.item_content:hover .item_info {
+				height: 320px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="item_content">
+			<img src="https://picsum.photos/320/180?image=866" style="width: 100%;height: 180px;" />
+
+			<div class="item_info">
+				<div style="height: 140px;display: flex;justify-content: center;align-items: center;border-bottom: 1px solid #646466;">标题</div>
+				<div style="height: 180px;display: flex;justify-content: center;align-items: center;">天下第一</div>
+			</div>
+		</div>
+		<div style="display: flex;justify-content: center;">
+			<button onclick="window.history.back(-1)" class="btn btn-4 btn-4b icon-arrow-left" style="background-color: #5c5353;">BACK</button>
+			<button onclick="goPage()" class="btn btn-4 btn-4a icon-arrow-right" style="background-color: #5c5353;">NEXT</button>
+		</div>
+
+		<script>
+			function goPage () {
+				window.location.href = 'sidebar.html'
+			}
+		</script>
+	</body>
+</html>

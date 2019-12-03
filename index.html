@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/AestheYPicture.css">
+		<link rel="stylesheet" href="css/component.css" />
+		<title>那一世</title>
+	</head>
+	<body>
+		<div class="wrapper init">
+			<ul class="content">
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一瞬</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一瞬，我飞升成仙，不为长生，只为佑你平安喜乐</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一刻</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一刻，我升起风马，不为祈福，只为守候你的到来</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一日</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一日，我磨一砂石，不为修性，只为丢进你的心海</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一夜</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一夜，我彻宿低吟，不为参悟，只为寻你的气息</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一天</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一天，闭目在经殿香雾中，蓦然听见，你颂经中的真言</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一月</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一月，我摇动所有经筒，不为超度，只为触摸你指尖</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一年</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一年，磕长头匍匐在山路，不为觐见，只为贴着你的温暖</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="item">
+					<div class="inner">
+						<div class="bjPic"></div>
+						<div class="dir">
+							<h2>那一世</h2>
+						</div>
+						<div class="showBox">
+							<div class="showBox-dir">
+								<h2>那一世，转山转水转佛塔，不为修来世，只为途中相见</h2>
+							</div>
+							<div class="close">
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+		<div style="display: flex;justify-content: center;background-color: #1B1B1B;">
+			<button onclick="goPage()" class="btn btn-4 btn-4a icon-arrow-right" style="background-color: #5c5353;">NEXT</button>
+			<!--<button class="btn btn-4 btn-4b icon-arrow-left" style="background-color: #5c5353;">BACK</button>-->
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			(function() {
+				var $wrap = $(".wrapper");
+				init();
+
+				function init() {
+					/*图片加载延迟执行，不延迟，第二次进入的速度快会直接闪现出现*/
+					setTimeout(function() {
+						$wrap.removeClass("init");
+					}, 200)
+
+					/*执行事件函数*/
+					bindEvent();
+				}
+
+				function bindEvent() {
+					$(".item").on("click", function() {
+						$(this).addClass("active");
+						$wrap.addClass("startShowItem");
+
+					})
+					$(".close").on("click", function(e) {
+						e.stopPropagation();
+						console.log(123)
+						$(".active").removeClass("active");
+						$wrap.removeClass("startShowItem");
+
+					})
+				}
+			})();
+		</script>
+		<script>
+			function goPage () {
+				window.location.href = 'pictureFan.html'
+			}
+			// 雪花特效
+			window.onload = function() {
+				var minSize = 5; //最小字体
+				var maxSize = 50; //最大字体
+				var newOne = 100; //生成雪花间隔
+				var flakColor = "#fff"; //雪花颜色
+				var flak = $("<div class='xh'></div>").css({
+					position: "absolute",
+					"top": "0px"
+				}).html("❉"); //定义一个雪花
+				var dhight = $(window).height(); //定义视图高度
+				var dw = $(window).width(); //定义视图宽度
+				setInterval(function() {
+					var sizeflak = minSize + Math.random() * maxSize; //产生大小不等的雪花
+					var startLeft = Math.random() * dw; //雪花生成是随机的left值
+					var startopcity = 0.7 + Math.random() * 0.3; //随机透明度
+					var endpositionTop = dhight - 100; //雪花停止top的位置
+					var endLeft = Math.random() * dw; //雪花停止的left位置
+					var durationfull = 5000 + Math.random() * 5000; //雪花飘落速度不同
+					flak.clone().appendTo($("body")).css({
+						"left": startLeft,
+						"opacity": startopcity,
+						"font-size": sizeflak,
+						"color": flakColor
+					}).animate({
+						"top": endpositionTop,
+						"left": endLeft,
+						"apacity": 0.1
+					}, durationfull, function() {
+						$(this).remove()
+					});
+				}, newOne);
+			}
+		</script>
+	</body>
+
+</html>
